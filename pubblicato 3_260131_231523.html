@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Perfezione | Lavanderia Sartoriale Alessandria</title>
+    <meta name="description" content="Lavanderia La Perfezione, Via Dante 82 Alessandria. Ritiro e consegna a domicilio gratuiti.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet"> 
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#F5F3FF',
+                            100: '#EDE9FE',
+                            200: '#DDD6FE',
+                            500: '#8B5CF6',
+                            600: '#7C3AED',
+                            700: '#6D28D9',
+                            900: '#4C1D95',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(124, 58, 237, 0.15)',
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #EDE9FE;
+        }
+        .reveal-on-scroll { visibility: hidden; }
+        .reveal-on-scroll.animated { visibility: visible; animation: fadeUp 0.8s ease-out forwards; }
+        
+        /* Stile per le FAQ */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .5s ease-in-out; }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-600 bg-brand-50 antialiased selection:bg-brand-200"> 
+
+    <nav class="sticky top-0 z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="#" class="flex items-center gap-2 group">
+                    <span class="w-10 h-10 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl group-hover:bg-brand-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-shirt"></i>
+                    </span>
+                    <span class="font-serif text-2xl font-bold text-brand-900 tracking-tight">La Perfezione<span class="text-brand-600">.</span></span>
+                </a> 
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#servizi" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition uppercase tracking-wider">Servizi</a>
+                    <a href="#ritiro" class="text-sm font-bold text-brand-600 bg-brand-50 px-3 py-1 rounded-lg border border-brand-100 hover:bg-brand-100 transition uppercase tracking-wider">
+                        <i class="fa-solid fa-truck-fast mr-1"></i> Ritiro Gratuito
+                    </a>
+                    <a href="#dove-siamo" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition uppercase tracking-wider">Dove Siamo</a>
+                    <a href="tel:+390131254147" class="bg-brand-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-brand-700 transition shadow-soft hover:shadow-lg transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> 0131 254147
+                    </a>
+                </div>
+                
+                <div class="md:hidden">
+                    <a href="tel:+390131254147" class="bg-brand-100 text-brand-600 p-3 rounded-full">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav> 
+
+    <header class="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-brand-50 to-white">
+        <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/4 w-96 h-96 bg-brand-200/40 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 left-0 translate-y-12 -translate-x-1/4 w-64 h-64 bg-pink-200/30 rounded-full blur-3xl -z-10"></div> 
+
+        <div class="max-w-4xl mx-auto px-4 text-center animate-fade-up">
+            
+            <div class="inline-flex items-center gap-2 bg-white border border-brand-200 px-4 py-2 rounded-full text-brand-700 text-sm font-bold shadow-sm mb-8">
+                <span class="flex h-3 w-3 relative justify-center items-center">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-600"></span>
+                </span>
+                Ora con Ritiro e Consegna a Domicilio Gratuita
+            </div> 
+
+            <h1 class="font-serif text-5xl md:text-7xl font-bold text-brand-900 mb-8 leading-tight">
+                Ridiamo vita ai tuoi capi,<br>
+                con <span class="text-brand-600 italic relative z-10">
+                    delicatezza.
+                    <svg class="absolute w-full h-4 -bottom-2 left-0 text-brand-200/60 -z-10" viewBox="0 0 200 15" xmlns="http://www.w3.org/2000/svg"><path d="M0 10c40-10 60-15 100 0s60 10 100 0" stroke="currentColor" fill="none" stroke-width="4" stroke-linecap="round"/></svg>
+                </span>
+            </h1>
+            
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                In Via Dante 82. Tradizione manuale e tecnologie moderne. 
+                Prenota il ritiro comodamente da casa, veniamo noi.
+            </p> 
+
+            <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                <a href="#ritiro" class="w-full sm:w-auto bg-brand-600 text-white px-8 py-4 rounded-full font-bold hover:bg-brand-700 transition shadow-soft hover:shadow-xl flex items-center justify-center gap-3 text-lg">
+                    <i class="fa-solid fa-truck"></i> Prenota Ritiro
+                </a>
+                <a href="#servizi" class="w-full sm:w-auto bg-white text-brand-700 border-2 border-brand-100 px-8 py-4 rounded-full font-bold hover:border-brand-300 hover:bg-brand-50 transition flex items-center justify-center text-lg">
+                    Esplora i servizi
+                </a>
+            </div>
+        </div>
+    </header> 
+
+    <section id="ritiro" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-brand-900 rounded-[3rem] shadow-2xl overflow-hidden relative">
+                <div class="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
+                    <i class="fa-solid fa-map-location-dot absolute -top-10 -right-10 text-[20rem] text-white"></i>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 p-8 md:p-16 relative z-10 items-center">
+                    <div class="text-white">
+                        <span class="bg-brand-700 text-brand-100 font-bold px-4 py-1 rounded-full text-sm tracking-wide uppercase mb-6 inline-block">Novità</span>
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Tu rilassati.<br>Veniamo noi da te.</h2>
+                        <p class="text-brand-100 text-lg mb-8 leading-relaxed">
+                            Non hai tempo di passare in negozio? Nessun problema. Inserisci i tuoi dati qui a fianco: ci invierai una richiesta diretta su WhatsApp e organizzeremo il ritiro gratuito dei tuoi capi.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white"><i class="fa-solid fa-check"></i></div>
+                                <span>Ritiro e riconsegna gratuiti ad Alessandria</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white"><i class="fa-solid fa-check"></i></div>
+                                <span>Pagamento alla consegna</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 shadow-xl">
+                        <h3 class="font-serif text-2xl font-bold text-brand-900 mb-6 text-center">Prenota il Ritiro</h3>
+                        <form id="whatsappForm" onsubmit="inviaWhatsApp(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Il tuo Nome</label>
+                                <input type="text" id="nome" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200 transition" placeholder="Es. Mario Rossi">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Indirizzo di Ritiro</label>
+                                <input type="text" id="indirizzo" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200 transition" placeholder="Via, Numero Civico, Citofono">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Cosa dobbiamo ritirare?</label>
+                                <textarea id="capi" rows="2" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200 transition" placeholder="Es. 3 camicie, 1 piumone..."></textarea>
+                            </div>
+                            
+                            <div class="bg-brand-50 p-4 rounded-xl border border-brand-100 flex items-center justify-between cursor-pointer hover:bg-brand-100 transition group" onclick="document.getElementById('sottovuoto').click()">
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-white p-2 rounded-lg text-brand-600 shadow-sm">
+                                        <i class="fa-solid fa-box-archive"></i>
+                                    </div>
+                                    <div class="text-left">
+                                        <p class="font-bold text-brand-900 text-sm">Opzione Salva-Spazio</p>
+                                        <p class="text-xs text-brand-600">Restituzione sottovuoto (+2,00€)</p>
+                                    </div>
+                                </div>
+                                <input type="checkbox" id="sottovuoto" class="w-5 h-5 accent-brand-600 cursor-pointer">
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-[#25D366] text-white font-bold py-4 rounded-xl hover:bg-[#128C7E] transition shadow-md hover:shadow-lg flex items-center justify-center gap-2 text-lg">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i> Invia Richiesta
+                            </button>
+                            <p class="text-xs text-center text-gray-400 mt-2">Si aprirà WhatsApp con i tuoi dati precompilati.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servizi" class="py-24 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <h2 class="font-serif text-4xl font-bold text-brand-900">I Nostri Servizi Sartoriali</h2>
+                <p class="text-gray-500 mt-4 max-w-xl mx-auto">Un menu completo per ogni esigenza del tuo guardaroba e della tua casa.</p>
+            </div> 
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group reveal-on-scroll bg-white p-8 rounded-3xl shadow-sm hover:shadow-soft transition-all duration-300 hover:-translate-y-2 border border-brand-100/50">
+                    <div class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-3xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300 rotate-3">
+                        <i class="fa-solid fa-vest-patches"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-3">Lavaggio a Secco</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Il trattamento re per cappotti, abiti da cerimonia, seta e lana. Rimuove lo sporco senza stressare le fibre.</p>
+                </div> 
+
+                <div class="group reveal-on-scroll bg-white p-8 rounded-3xl shadow-sm hover:shadow-soft transition-all duration-300 hover:-translate-y-2 border border-brand-100/50">
+                    <div class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-3xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300 -rotate-3">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-3">Wet Cleaning</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">La nuova frontiera del lavaggio ad acqua. Igiene profonda e freschezza per piumoni, trapunte e biancheria.</p>
+                </div> 
+
+                <div class="group reveal-on-scroll bg-white p-8 rounded-3xl shadow-sm hover:shadow-soft transition-all duration-300 hover:-translate-y-2 border border-brand-100/50">
+                    <div class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-3xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300 rotate-3">
+                        <i class="fa-solid fa-temperature-arrow-up"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-3">Stiratura Perfetta</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Liberati del ferro da stiro. Portaci i tuoi capi lavati, te li restituiamo senza una piega, pronti da indossare.</p>
+                </div> 
+
+                <div class="group reveal-on-scroll bg-white p-8 rounded-3xl shadow-sm hover:shadow-soft transition-all duration-300 hover:-translate-y-2 border border-brand-100/50">
+                    <div class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-3xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition duration-300 -rotate-3">
+                        <i class="fa-solid fa-rug"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-3">Tappeti & Arredo</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Rinnova la tua casa. Lavaggio professionale di tappeti pregiati, tendaggi voluminosi e fodere divani.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="font-serif text-3xl font-bold text-brand-900 text-center mb-12">Domande Frequenti</h2>
+            <div class="space-y-4">
+                <details class="group bg-brand-50 p-6 rounded-2xl cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brand-900">
+                        Quanto costa il ritiro a domicilio?
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-brand-500"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 leading-relaxed">Il servizio di ritiro e riconsegna è completamente gratuito per la zona di Alessandria città!</p>
+                </details>
+                
+                <details class="group bg-brand-50 p-6 rounded-2xl cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brand-900">
+                        Quanto tempo ci vuole per la consegna?
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-brand-500"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 leading-relaxed">Solitamente impieghiamo 2-3 giorni lavorativi, ma dipende dal tipo di capo. Per urgenze, contattaci!</p>
+                </details>
+
+                <details class="group bg-brand-50 p-6 rounded-2xl cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brand-900">
+                        Lavate anche piumoni in piuma d'oca?
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-brand-500"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 leading-relaxed">Assolutamente sì. Utilizziamo detergenti specifici e un'asciugatura delicata per ridare volume e morbidezza alle piume.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="dove-siamo" class="py-20 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-brand-600 rounded-[3rem] overflow-hidden shadow-2xl flex flex-wrap lg:flex-nowrap reveal-on-scroll">
+                
+                <div class="w-full lg:w-2/5 p-12 lg:p-16 flex flex-col justify-center text-white relative overflow-hidden">
+                    <i class="fa-regular fa-clock absolute -top-10 -right-10 text-9xl text-brand-500/30"></i>
+                    <i class="fa-solid fa-location-dot absolute -bottom-10 -left-10 text-9xl text-brand-500/30"></i>
+                    
+                    <h2 class="font-serif text-4xl font-bold mb-10 relative z-10">Vieni a trovarci in boutique</h2>
+                    
+                    <div class="space-y-10 relative z-10">
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-brand-500/50 rounded-xl flex items-center justify-center text-2xl shrink-0">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-brand-200 text-xs font-bold uppercase tracking-widest mb-2">INDIRIZZO</p>
+                                <p class="text-2xl font-bold font-serif">Via Dante Alighieri, 82</p>
+                                <p class="text-brand-100">15121 Alessandria (AL)</p>
+                            </div>
+                        </div> 
+
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-brand-500/50 rounded-xl flex items-center justify-center text-2xl shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="w-full">
+                                <p class="text-brand-200 text-xs font-bold uppercase tracking-widest mb-2">ORARI D'APERTURA</p>
+                                
+                                <div class="flex justify-between items-start border-b border-brand-500/50 pb-2 mb-2">
+                                    <span class="py-1">Lun - Ven</span>
+                                    <div class="text-right">
+                                        <span class="font-bold text-xl block">07:30 - 12:30</span>
+                                        <span class="font-bold text-xl block">14:30 - 19:15</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-brand-500/50 pb-2 mb-2">
+                                    <span>Sabato</span>
+                                    <span class="font-bold text-xl">07:30 - 13:00</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="opacity-80">Domenica</span>
+                                    <span class="font-bold uppercase tracking-wide text-brand-200">Chiuso</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="w-full lg:w-3/5 min-h-[500px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.623458928151!2d8.618094015694856!3d44.91285407909831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47879a8f4b0b0b0b%3A0x0!2sVia%20Dante%20Alighieri%2C%2082%2C%2015121%20Alessandria%20AL!5e0!3m2!1sit!2sit!4v1645000000000!5m2!1sit!2sit" 
+                        class="w-full h-full grayscale hover:grayscale-0 transition duration-700" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <footer class="bg-white py-12 border-t border-brand-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <a href="#" class="inline-block mb-6 group">
+                 <span class="w-12 h-12 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl shadow-sm mx-auto mb-3 group-hover:rotate-12 transition">
+                    <i class="fa-solid fa-shirt"></i>
+                </span>
+                <span class="font-serif text-2xl font-bold text-brand-900">La Perfezione</span>
+            </a>
+            <p class="text-gray-500 mb-6">Il tuo punto di riferimento per il pulito ad Alessandria.</p>
+            <div class="flex justify-center gap-8 mb-8 text-brand-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-gem"></i>
+            </div>
+            <p class="text-xs text-gray-400">
+                © 2024 Lavanderia La Perfezione | Via Dante Alighieri 82, Alessandria
+            </p>
+        </div>
+    </footer> 
+
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-brand-100 p-4 shadow-[0_-4px_20px_rgba(124,58,237,0.15)] z-50 flex gap-3">
+        <a href="tel:+390131254147" class="flex-1 bg-brand-600 text-white py-3 rounded-full text-center font-bold shadow-md hover:bg-brand-700 transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-phone"></i> CHIAMA
+        </a>
+        <a href="#ritiro" class="flex-1 bg-[#25D366] text-white py-3 rounded-full text-center font-bold shadow-md hover:bg-[#128C7E] transition flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp"></i> RITIRO
+        </a>
+    </div> 
+
+    <script>
+        // Funzione per inviare i dati a WhatsApp
+        function inviaWhatsApp(e) {
+            e.preventDefault();
+            
+            // Prende i valori dal modulo
+            const nome = document.getElementById('nome').value;
+            const indirizzo = document.getElementById('indirizzo').value;
+            const capi = document.getElementById('capi').value;
+            // Controlla se il sottovuoto è stato richiesto
+            const isSottovuoto = document.getElementById('sottovuoto').checked;
+            
+            // IL TUO NUMERO PER WHATSAPP (Aggiornato)
+            const telefonoLavanderia = "393319023825"; 
+            
+            // Crea la stringa extra per il sottovuoto
+            let messaggioSottovuoto = "";
+            if(isSottovuoto) {
+                messaggioSottovuoto = "%0A📦 *Opzione Sottovuoto:* SÌ (+2€)";
+            }
+            
+            // Crea il messaggio completo
+            const testo = `Ciao Lavanderia La Perfezione! Vorrei prenotare un ritiro a domicilio.%0A%0A👤 *Nome:* ${nome}%0A📍 *Indirizzo:* ${indirizzo}%0A👔 *Capi da ritirare:* ${capi}${messaggioSottovuoto}`;
+            
+            // Apre WhatsApp
+            window.open(`https://wa.me/${telefonoLavanderia}?text=${testo}`, '_blank');
+        }
+
+        // Animazione scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, { threshold: 0.1 }); 
+
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+            observer.observe(el);
+        });
+    </script> 
+
+</body>
+</html>
